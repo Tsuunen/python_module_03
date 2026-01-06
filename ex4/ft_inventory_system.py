@@ -1,4 +1,5 @@
 def show_inv(inv: dict) -> None:
+    """print an inventory gracefully"""
     total_value: int = 0
     count: int = 0
     types: dict = {}
@@ -27,6 +28,7 @@ def show_inv(inv: dict) -> None:
 
 
 def get_inv_value(inv: dict) -> int:
+    """return the value of the inv inventory"""
     value: int = 0
     for info in inv.values():
         value += info.get("value", 0) * info.get("quantity", 0)
@@ -34,6 +36,7 @@ def get_inv_value(inv: dict) -> int:
 
 
 def get_item_count(inv: dict) -> int:
+    """return the number of items in inv"""
     count: int = 0
     for info in inv.values():
         count += info.get("quantity", 0)
@@ -41,6 +44,7 @@ def get_item_count(inv: dict) -> int:
 
 
 def get_rarest_items(inv_list: list):
+    """Return all the items with the highest rarity"""
     RARITY_ORDER = {
         "unknown": -1,
         "common": 1,
@@ -86,6 +90,7 @@ if (__name__ == "__main__"):
         },
     }
 
+    print("=== Alice's Inventory ===")
     show_inv(alice)
     bob = {
         "magic_ring": {

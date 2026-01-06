@@ -1,4 +1,5 @@
 def gen_game_event(n: int):
+    """Game event generator n times"""
     player: list = ["Alice", "Bob", "Charlie"]
     level: list = [5, 12, 8, 10, 1, 4, 3]
     actions: list = ["killed monster", "found treasure", "leveled up"]
@@ -7,6 +8,7 @@ def gen_game_event(n: int):
 
 
 def fib_gen(n: int):
+    """Fibonacci generator, the n first"""
     i1: int = 0
     i2: int = 1
     for i in range(n):
@@ -22,6 +24,7 @@ def fib_gen(n: int):
 
 
 def prime_gen(n: int):
+    """Prime generator, the n first"""
     i: int = 2
     count: int = 0
     while (count < n):

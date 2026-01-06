@@ -1,4 +1,5 @@
 def score_key(item):
+    """return score key value"""
     return item[1].get("score", 0)
 
 

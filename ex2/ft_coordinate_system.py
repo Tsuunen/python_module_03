@@ -2,10 +2,12 @@ import math
 
 
 def compute_distance(o: tuple, p: tuple) -> float:
+    """Get the distance between two point in space"""
     return (math.sqrt((p[0] - o[0])**2 + (p[1] - o[1])**2 + (p[2] - o[2])**2))
 
 
 def parse_coords(coords: str) -> tuple:
+    """get coord tuple from coord string"""
     return (tuple(int(x) for x in coords.split(",")))
 
 
@@ -21,7 +23,7 @@ if (__name__ == "__main__"):
     position = parse_coords(coords)
     print("Parsed position:", position)
     print(f"Distance between {origin} and {position}: \
-{compute_distance(origin, position):.2f}\n")
+{compute_distance(origin, position)}\n")
     try:
         coords = "abc,def,ghi"
         print("Parsing invalid coordinates:", coords)
