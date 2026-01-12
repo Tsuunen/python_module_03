@@ -1,4 +1,5 @@
 import math
+import sys
 
 
 def compute_distance(o: tuple, p: tuple) -> float:
@@ -35,3 +36,15 @@ if (__name__ == "__main__"):
     x, y, z = (3, 4, 0)
     print(f"Player at x={x}, y={y}, z={z}")
     print(f"Coordinates: X={x}, Y={y}, Z={z}")
+    # Faire bouvle for sur les coords en parametre de programme argv
+    for i in range(len(sys.argv)):
+        if (i > 0):
+            try:
+                coords = parse_coords(sys.argv[i])
+                if (len(coords) != 3):
+                    raise Exception
+                x, y, z = coords
+                print(f"\nPlayer at x={x}, y={y}, z={z}")
+                print(f"Coordinates: X={x}, Y={y}, Z={z}")
+            except Exception:
+                print("\nInvalid coords")
