@@ -36,7 +36,6 @@ if (__name__ == "__main__"):
     x, y, z = (3, 4, 0)
     print(f"Player at x={x}, y={y}, z={z}")
     print(f"Coordinates: X={x}, Y={y}, Z={z}")
-    # Faire bouvle for sur les coords en parametre de programme argv
     for i in range(len(sys.argv)):
         if (i > 0):
             try:
